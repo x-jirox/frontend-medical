@@ -1,13 +1,22 @@
 @import "tailwindcss";
 
+/* 🎨 Definición de tema */
 @theme {
   --color-primary: #5F6FFF;
 }
 
+/* 🧩 Utilidades personalizadas */
+@layer utilities {
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* 🌐 Estilos adicionales */
 .active hr {
-  @apply block
+  @apply block;
 }
 
 ::-webkit-scrollbar {
-  @apply hidden
+  @apply hidden;
 }
