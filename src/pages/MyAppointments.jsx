@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {AppContext} from '../context/AppContext'
+import { AppContext } from '../context/AppContext'
 
 const MyAppointments = () => {
 
@@ -9,7 +9,7 @@ const MyAppointments = () => {
     <div>
       <p className='pb-3 mt-12 font-medium text-zinc-700 border-b'>Mis citas Medicas</p>
       <div>
-        {doctors.slice(0,2).map((item, index) =>(
+        {doctors.slice(0, 2).map((item, index) => (
           <div className='grid grid-cols-[1fr_2fr] gap-4 sm:flex sm:gap-6 py-3 ' key={index}>
             <div>
               <img className='w-32 bg-indigo-50' src={item.image} alt="" />
@@ -22,6 +22,7 @@ const MyAppointments = () => {
               <p className='text-xs'>{item.address.line2}</p>
               <p className='text-xs mt-1'><span className='text-sm text-neutral-700 font-medium'>Fecha y Hora</span> 25 de Julio del 2025 | 8:30 PM</p>
             </div>
+            <div></div>
             <div className='flex flex-col gap-2 justify-end'>
               <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border cursor-pointer hover:bg-primary hover:text-white transition.all duration-300'>Pagar en linea</button>
               <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border cursor-pointer hover:bg-red-800 hover:text-white transition.all duration-300'>Cancelar Cita</button>
